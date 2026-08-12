@@ -72,12 +72,18 @@ a:hover { color: var(--blue-800); }
 .brand-text { line-height: 1.25; }
 .brand-text strong { display: block; font-size: 0.9rem; letter-spacing: 0.02em; white-space: nowrap; }
 .brand-text span { display: block; font-size: 0.68rem; color: var(--ink-soft); white-space: nowrap; }
+@media (max-width: 560px) {
+  .brand { gap: 10px; }
+  .brand-mark { width: 38px; height: 38px; font-size: 0.7rem; }
+  .brand-text strong { font-size: 0.78rem; }
+  .brand-text span { font-size: 0.6rem; }
+}
 
 .main-nav ul { display: flex; gap: 2px; list-style: none; }
 .main-nav a {
   display: block; padding: 8px 13px; border-radius: 999px;
   font-size: 0.9rem; font-weight: 600; color: var(--ink);
-  transition: 0.2s;
+  transition: 0.2s; white-space: nowrap;
 }
 .main-nav a:hover { background: var(--blue-50); color: var(--blue-700); }
 .main-nav a.active { background: var(--grad); color: #fff; }
