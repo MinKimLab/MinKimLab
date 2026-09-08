@@ -402,6 +402,61 @@ a:hover { color: var(--blue-800); }
 .contact-info-card dd { font-size: 0.97rem; margin-top: 2px; }
 .contact-info-card a { color: #fff; text-decoration: underline; }
 
+/* ---------- Recruit panel (Korean) ---------- */
+.recruit-panel {
+  position: relative;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--blue-50) 0%, #fff 55%, #f4f0fd 100%);
+  border: 1.5px solid var(--blue-100);
+  box-shadow: var(--shadow);
+  padding: 48px clamp(28px, 5vw, 56px);
+  overflow: hidden;
+}
+.recruit-panel::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+  background: var(--grad);
+}
+.recruit-badge {
+  display: inline-block; padding: 5px 16px; border-radius: 999px;
+  background: var(--grad); color: #fff;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.recruit-panel h2 {
+  color: var(--blue-900); font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-weight: 800; line-height: 1.35; margin-bottom: 12px;
+}
+.recruit-panel .quote {
+  color: var(--blue-700); font-weight: 600; font-size: 1.02rem; margin-bottom: 10px;
+}
+.recruit-panel .lede { color: var(--ink-soft); font-size: 0.95rem; max-width: 860px; }
+.recruit-cols {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px; margin-top: 30px;
+}
+.recruit-col {
+  background: rgba(255, 255, 255, 0.85); border: 1px solid var(--line);
+  border-radius: var(--radius-sm); padding: 22px 24px;
+}
+.recruit-col h3 {
+  color: var(--blue-800); font-size: 0.98rem; font-weight: 700; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 8px;
+}
+.recruit-col ul { list-style: none; color: var(--ink-soft); font-size: 0.88rem; }
+.recruit-col ul li { margin: 7px 0; padding-left: 14px; position: relative; }
+.recruit-col ul li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--blue-500);
+}
+.recruit-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.recruit-actions .btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px; border-radius: 999px;
+  border: 1.5px solid var(--blue-600); color: var(--blue-700);
+  font-weight: 700; font-size: 0.9rem; transition: 0.2s;
+}
+.recruit-actions .btn-outline:hover { background: var(--blue-50); }
+
 /* ---------- Home extras ---------- */
 .highlight-band { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 @media (max-width: 860px) { .highlight-band { grid-template-columns: 1fr; } }
